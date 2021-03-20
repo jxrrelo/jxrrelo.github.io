@@ -6,10 +6,7 @@ var gutil         = require('gulp-util');
 var cryptojs      = require('crypto-js');
 var marked        = require('marked');
 var FileSystem    = require('fs');
-var Path          = require('path');
 var through       = require('through2');
-var childProcess = require("child_process");
-
 var PluginError   = gutil.PluginError;
 
 /*
@@ -63,24 +60,26 @@ function encrypt(password) {
 
     if (file.isBuffer()) {
       var delimiter = '---',
-          frontMatter = String(file.contents).split(delimiter)[1],
-          settings = frontMatter.split('\n');
-      // console.log(settings);
-      for (let i = 0; i < settings.length; i++) {
-          var settingname = settings[i].split(':')[0];
-          // console.log(settingname);
-          if (settingname == 'password') {
-		var passw = settings[i].split(':')[1].trimLeft();
-		password = passw;
-		frontMatter = frontMatter.replace(settings[i], '');
-          }
+          chunks = String(file.contents).split(delimiter),
+          originalBody = chunks[0],
+          frontMatter = '';
+
+      if (chunks.length === 3) {
+        checkEncryptedLayout(chunks[1], file.path);
+        frontMatter = chunks[1];
+        originalBody = chunks[2];
+      } else if (chunks.length > 1) {
+        this.emit('error', new PluginError({
+          plugin: 'Encrypt',
+          message: file.path + ': protected file has invalid front matter.'
+        }));
+        return callback();
       }
-      var pathSects = Path.basename(file.path).split('.');
-      var targetPath = '/tmp/code/' + pathSects.slice(0, pathSects.length - 1).join('.') + '.html';
-      var encryptedBody = cryptojs.AES.encrypt(FileSystem.readFileSync(targetPath).toString(), password),
+
+      var encryptedBody = cryptojs.AES.encrypt(marked(originalBody), password),
           hmac = cryptojs.HmacSHA256(encryptedBody.toString(), cryptojs.SHA256(password).toString()).toString(),
           encryptedFrontMatter = 'encrypted: ' + hmac + encryptedBody,
-          result = [ delimiter, frontMatter, '\n', 'layout: encrypted', '\n', encryptedFrontMatter, '\n', delimiter ];
+          result = [ delimiter, frontMatter, '\n', encryptedFrontMatter, '\n', delimiter ];
 
       file.contents = new Buffer(result.join(''));
       this.push(file);
@@ -90,21 +89,22 @@ function encrypt(password) {
 }
 
 gulp.task('firewall:encrypt', () => {
-  childProcess.execSync('jekyll build --config _config.yml -s _protected -d /tmp/code', (a,b,c)=>{});
-  var res = gulp.src('_protected/*.*')
+  return gulp.src('_protected/*.*')
     .pipe(encrypt('password'))
     .pipe(gulp.dest('_posts'));
-  // childProcess.execSync('rm -rf /tmp/code', (a,b,c)=>{});
-  return res;
 });
 
+gulp.task('firewall:watch', () => {
+  gulp.watch('_protected/*.*', gulp.series('firewall:encrypt'));
+});
 
-gulp.task('firewall', gulp.series(['firewall:encrypt'], () => {}));
+gulp.task('firewall', gulp.series('firewall:encrypt', 'firewall:watch',() => {}));
+
 
 /*
   END FIREWALL TASKS
 */
 
-gulp.task('default', gulp.series(['firewall'], () => {
+gulp.task('default', gulp.series('firewall', () => {
   // your tasks here
 }));
