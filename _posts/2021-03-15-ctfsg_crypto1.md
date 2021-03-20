@@ -1,0 +1,17 @@
+---
+title: 'Long Long Encrypt'
+date: 2021-03-15 00:00:00+0800
+excerpt: Long Long Encrypt is the first Crypto challenge of CTFSG 2021. This challenge introduced a different variation of RSA to compute `n`.
+comments: false
+---
+## Introduction
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est neque, a semper ex dapibus ullamcorper. Donec nec metus vitae lectus consectetur malesuada at sed leo. Vivamus ornare augue at metus convallis, vel pulvinar risus pellentesque. In hac habitasse platea dictumst. Ut in tellus neque. Ut gravida nisl ullamcorper ligula facilisis, non molestie dolor bibendum. Aliquam posuere vulputate sapien, in dictum elit condimentum.
+
+## Basic analysis
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est neque, a semper ex dapibus ullamcorper. Donec nec metus vitae lectus consectetur malesuada at sed leo. Vivamus ornare augue at metus convallis, vel pulvinar risus pellentesque. In hac habitasse platea dictumst. Ut in tellus neque. Ut gravida nisl ullamcorper ligula facilisis, non molestie dolor bibendum. Aliquam posuere vulputate sapien, in dictum elit condimentum.
+
+## Exploitation
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est neque, a semper ex dapibus ullamcorper. Donec nec metus vitae lectus consectetur malesuada at sed leo. Vivamus ornare augue at metus convallis, vel pulvinar risus pellentesque. In hac habitasse platea dictumst. Ut in tellus neque. Ut gravida nisl ullamcorper ligula facilisis, non molestie dolor bibendum. Aliquam posuere vulputate sapien, in dictum elit condimentum.
+
+## Conclusion
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est neque, a semper ex dapibus ullamcorper. Donec nec metus vitae lectus consectetur malesuada at sed leo. Vivamus ornare augue at metus convallis, vel pulvinar risus pellentesque. In hac habitasse platea dictumst. Ut in tellus neque. Ut gravida nisl ullamcorper ligula facilisis, non molestie dolor bibendum. Aliquam posuere vulputate sapien, in dictum elit condimentum.
