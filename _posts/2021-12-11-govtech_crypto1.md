@@ -1,13 +1,13 @@
 ---
 title: 'Can COViD Steal Bob’s Idea?'
 date: 2020-12-11 00:00:00+0800
-excerpt: Can CoViD Steal Bob's Idea is the first Crypto challenge of GovTech Stack The Flags 2020. This challenge requires us to examine a .pcap file to retrieve information about a Diffie-Hellman Key Exchange.
+excerpt: 'GovTech Stack The Flags 2020 - Crypto Challenge #1. This challenge requires us to examine a .pcap file to retrieve information about a Diffie-Hellman Key Exchange.'
 comments: false
 ---
 ## Introduction
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est neque, a semper ex dapibus ullamcorper. Donec nec metus vitae lectus consectetur malesuada at sed leo. Vivamus ornare augue at metus convallis, vel pulvinar risus pellentesque. In hac habitasse platea dictumst. Ut in tellus neque. Ut gravida nisl ullamcorper ligula facilisis, non molestie dolor bibendum. Aliquam posuere vulputate sapien, in dictum elit condimentum.
 
-## Basic analysis
+## Analysis
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est neque, a semper ex dapibus ullamcorper. Donec nec metus vitae lectus consectetur malesuada at sed leo. Vivamus ornare augue at metus convallis, vel pulvinar risus pellentesque. In hac habitasse platea dictumst. Ut in tellus neque. Ut gravida nisl ullamcorper ligula facilisis, non molestie dolor bibendum. Aliquam posuere vulputate sapien, in dictum elit condimentum.
 
 ## Exploitation
