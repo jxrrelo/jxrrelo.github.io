@@ -1,0 +1,70 @@
+/* montserrat-500 - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat Medium'), local('Montserrat-Medium'),
+        url('../fonts/montserrat-v14-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v14-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-regular - latin */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'),
+        url('../fonts/nunito-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/nunito-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    margin: 0;
+    color: #222222;
+}
+
+h1, h2 {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.5;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+#header > * {
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    max-width: 70ch;
+    font-size: 1.2rem;
+    margin: 1rem 1rem;
+}

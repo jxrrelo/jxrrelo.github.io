@@ -1,54 +1,37 @@
----
-layout: default
-title: My blog
-description:
----
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jaryl Loh</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>{ Jaryl Loh } </h1>
+            </div>
+            <div class="row">
+                <div id="about-me" class="content">
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est neque, a semper ex dapibus ullamcorper. Donec nec metus vitae lectus consectetur malesuada at sed leo. Vivamus ornare augue at metus convallis, vel pulvinar risus pellentesque. In hac habitasse platea dictumst. Ut in tellus neque. Ut gravida nisl ullamcorper ligula facilisis, non molestie dolor bibendum. Aliquam posuere vulputate sapien, in dictum elit condimentum.</p>
+                </div>
+            </div>
 
-<section class="listing single">
+            <div class="row">
+                <div id="projects" class="content">
+                    <h2>Projects</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est neque, a semper ex dapibus ullamcorper. Donec nec metus vitae lectus consectetur malesuada at sed leo. Vivamus ornare augue at metus convallis, vel pulvinar risus pellentesque. In hac habitasse platea dictumst. Ut in tellus neque. Ut gravida nisl ullamcorper ligula facilisis, non molestie dolor bibendum. Aliquam posuere vulputate sapien, in dictum elit condimentum.</p>
+                </div>
+            </div>
 
-	<div class="wrap">
+            <div class="row">
+                <div id="publications" class="content">
+                    <h2>Publications</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est neque, a semper ex dapibus ullamcorper. Donec nec metus vitae lectus consectetur malesuada at sed leo. Vivamus ornare augue at metus convallis, vel pulvinar risus pellentesque. In hac habitasse platea dictumst. Ut in tellus neque. Ut gravida nisl ullamcorper ligula facilisis, non molestie dolor bibendum. Aliquam posuere vulputate sapien, in dictum elit condimentum.</p>
+                </div>
+            </div>
+        </div>
 
-		{% for post in paginator.posts %}
-
-		<article class="listing-post">
-
-			<div class="listing-post__header">
-				<h2 class="listing-post__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-				<p class="listing-post__subtitle">{{ post.date | date_to_long_string }}</p>
-			</div>
-
-			{% if post.featured_image %}
-			<a href="{{ post.url | relative_url }}" class="listing-post__image" style="background-image: url({{ post.featured_image | relative_url }});"></a>
-			{% endif %}
-
-			<div class="listing-post__header">
-				<p>{{ post.excerpt }}</p>
-				<!-- <p><a href="{{ post.url | relative_url }}" class="button">Read More</a> -->
-			</div>
-
-		</article>
-
-		{% endfor %}
-
-	</div>
-
-</section>
-
-{% if paginator.total_pages > 1 %}
-
-<section class="pagination">
-
-	{% if paginator.previous_page %}
-	<div class="pagination__prev">
-		<a href="{{ paginator.previous_page_path | relative_url }}" class="button button--large"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
-	</div>
-	{% endif %}
-	{% if paginator.next_page %}
-	<div class="pagination__next">
-		<a href="{{ paginator.next_page_path | relative_url }}" class="button button--large"><span>Older Posts</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-	</div>
-	{% endif %}
-
-</section>
-
-{% endif %}
+        <script src="script.js"></script>
+    </body>
+</html>
