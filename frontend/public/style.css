@@ -45,7 +45,6 @@ footer {
 .contact .contact-content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
 }
 section .title {
@@ -189,7 +188,7 @@ section .title::after {
   margin: 10px 0;
 }
 
-.home .home-content .text-3 span {
+.home .home-content .text-3 {
   color: #c94242;
   font-weight: 500;
 }
@@ -299,37 +298,122 @@ section .title::after {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
-/* skills section styling */
+
+/* SKILLS */
 .skills .title::after {
   content: "${lscpu}";
 }
 .skills .skills-content .column {
-  width: calc(50% - 30px);
+  width: 20%;
 }
 .skills .skills-content .left .text {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.skills .skills-content .left p {
-  text-align: justify;
+
+.skills .skills-content .left .bars {
+  margin-bottom: 15px;
 }
-.skills .skills-content .left a {
-  display: inline-block;
-  background: #c94242;
-  color: #fff;
-  font-size: 18px;
+.skills .skills-content .left .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .left span {
   font-weight: 500;
-  padding: 8px 16px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px soli: #c94242;
-  transition: all 0.3s ease;
+  font-size: 18px;
 }
-.skills .skills-content .left a:hover {
-  color: #c94242;
-  background: none;
+.skills .skills-content .left .line {
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
 }
+.skills .skills-content .left .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #c94242;
+}
+
+.skills .skills-content .middle-left .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skills-content .middle-left .bars {
+  margin-bottom: 15px;
+}
+.skills .skills-content .middle-left .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .middle-left span {
+  font-weight: 500;
+  font-size: 18px;
+}
+.skills .skills-content .middle-left .line {
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+}
+.skills .skills-content .middle-left .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #c94242;
+}
+
+.skills .skills-content .middle-right .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skills-content .middle-right .bars {
+  margin-bottom: 15px;
+}
+.skills .skills-content .middle-right .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills .skills-content .middle-right span {
+  font-weight: 500;
+  font-size: 18px;
+}
+.skills .skills-content .middle-right .line {
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+}
+.skills .skills-content .middle-right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #c94242;
+}
+
+.skills .skills-content .right .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
 .skills .skills-content .right .bars {
   margin-bottom: 15px;
 }
@@ -357,20 +441,51 @@ section .title::after {
   top: 0;
   background: #c94242;
 }
-.skills-content .right .html::before {
+.skills-content .left .java::before {
   width: 90%;
 }
-.skills-content .right .css::before {
+.skills-content .left .python::before {
+  width: 70%;
+}
+.skills-content .left .dart::before {
   width: 60%;
 }
-.skills-content .right .js::before {
-  width: 80%;
-}
-.skills-content .right .php::before {
+.skills-content .left .cpp::before {
   width: 50%;
 }
-.skills-content .right .mysql::before {
+
+.skills-content .middle-left .flutter::before {
   width: 70%;
+}
+.skills-content .middle-left .node::before {
+  width: 60%;
+}
+.skills-content .middle-left .express::before {
+  width: 60%;
+}
+
+.skills-content .middle-right .sage::before {
+  width: 50%;
+}
+.skills-content .middle-right .burp::before {
+  width: 70%;
+}
+.skills-content .middle-right .ghidra::before {
+  width: 50%;
+}
+.skills-content .middle-right .gdb::before {
+  width: 80%;
+}
+.skills-content .middle-right .wireshark::before {
+  width: 70%;
+}
+
+
+.skills-content .right .mysql::before {
+  width: 60%;
+}
+.skills-content .right .mongodb::before {
+  width: 60%;
 }
 /* teams section styling */
 .teams .title::after {
@@ -407,7 +522,7 @@ section .title::after {
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px soli: #c94242;
+  border: 5px solid #c94242;
   transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img {
@@ -522,7 +637,7 @@ section .title::after {
   cursor: pointer;
   flex-wrap: nowrap;
   background: #c94242;
-  border: 2px soli: #c94242;
+  border: 2px solid #c94242;
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover {
