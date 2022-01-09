@@ -420,11 +420,11 @@ section .title::after {
 .skills-content .left .dart::before {
   width: 60%;
 }
-.skills-content .left .c::before {
+.skills-content .left .c-lang::before {
   width: 50%;
 }
-.skills-content .left .cpp::before {
-  width: 20%;
+.skills-content .left .javascript::before {
+  width: 50%;
 }
 
 .skills-content .middle-left .flutter::before {
