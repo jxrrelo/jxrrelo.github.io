@@ -420,25 +420,28 @@ section .title::after {
 .skills-content .left .dart::before {
   width: 60%;
 }
-.skills-content .left .cpp::before {
+.skills-content .left .c::before {
   width: 50%;
+}
+.skills-content .left .cpp::before {
+  width: 20%;
 }
 
 .skills-content .middle-left .flutter::before {
   width: 70%;
 }
 .skills-content .middle-left .node::before {
-  width: 60%;
+  width: 30%;
 }
 .skills-content .middle-left .express::before {
-  width: 60%;
+  width: 30%;
 }
 
 .skills-content .middle-right .sage::before {
-  width: 50%;
+  width: 40%;
 }
 .skills-content .middle-right .burp::before {
-  width: 70%;
+  width: 60%;
 }
 .skills-content .middle-right .ghidra::before {
   width: 50%;
@@ -451,10 +454,10 @@ section .title::after {
 }
 
 .skills-content .right .mysql::before {
-  width: 60%;
+  width: 70%;
 }
 .skills-content .right .mongodb::before {
-  width: 60%;
+  width: 40%;
 }
 /* PROJECTS */
 .projects .title::after {
