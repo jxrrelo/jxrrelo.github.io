@@ -424,7 +424,7 @@ section .title::after {
   width: 50%;
 }
 .skills-content .left .javascript::before {
-  width: 50%;
+  width: 40%;
 }
 
 .skills-content .middle-left .flutter::before {
